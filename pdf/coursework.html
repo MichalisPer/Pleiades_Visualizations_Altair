@@ -1,0 +1,479 @@
+<!DOCTYPE html><html ns-role="label" ns-label-name="aim" ns-label-kind="paired"><head>
+      <title>coursework</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\perik\.vscode\extensions\gicentre.markdown-preview-enhanced-with-litvis-0.28.0\node_modules\mume-with-litvis\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export" ns-role="label-child">
+      <div class="mume markdown-preview  ">
+      <style>
+/* narrative schema: C:\Users\perik\Desktop\Level_3\CSC-337~Data Visualisation\Coursework\985936 _pdf\coursework.yml */
+.cw.narrative {
+  background-color: #cccccc;
+}
+.cw.narrative h2 {
+  background-color: #909090;
+  font-size: 1em;
+  margin-bottom: 0;
+}
+</style><p>Author: Perikleous Michalis (985936)</p>
+<p></p><div class="cw narrative" ns-role="label-child"><h2 ns-role="label-child">What can we learn from the visualization?</h2><div ns-role="label-child"><br>
+This chart shows the count of locations of <strong>top seven</strong> <code>period</code> that occur much more frequently in the dataset. It also shows the count of locations of <strong>top seven</strong> <code>type</code> of locations the occur much more frequently in the dataset, for each of these <code>period</code>.<br>
+</div></div><p></p>
+<p></p><div class="cw narrative" ns-role="label-child"><h2 ns-role="label-child">What is the name for the type of visualization(s) used?</h2><div ns-role="label-child"><br>
+For these visualizations we used <strong>bar charts</strong>(histograms)<br>
+</div></div><p></p>
+<h1 class="mume-header" id="data-preparation">Data Preparation</h1>
+
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token keyword">import</span> altair <span class="token keyword">as</span> alt
+<span class="token keyword">import</span> vega_datasets <span class="token keyword">as</span> data
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+locations <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">&apos;pleiades-locations.csv&apos;</span><span class="token punctuation">)</span>
+
+alt<span class="token punctuation">.</span>data_transformers<span class="token punctuation">.</span>disable_max_rows<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">#Data preparation: Match each period with the type based on order they are inserted</span>
+
+<span class="token comment">#Remove locations that with missing information, either from timePeriodsKeys or featureType</span>
+locations<span class="token punctuation">[</span><span class="token string">&apos;timePeriodsKeys&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> locations<span class="token punctuation">[</span><span class="token string">&apos;timePeriodsKeys&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">str</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">&apos; &apos;</span><span class="token punctuation">,</span><span class="token string">&apos;&apos;</span><span class="token punctuation">)</span>
+locations<span class="token punctuation">[</span><span class="token string">&apos;featureType&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> locations<span class="token punctuation">[</span><span class="token string">&apos;featureType&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">str</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">&apos;-2&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;&apos;</span><span class="token punctuation">)</span>
+locations<span class="token punctuation">.</span>dropna<span class="token punctuation">(</span>subset<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">&apos;timePeriodsKeys&apos;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+locations <span class="token operator">=</span> locations<span class="token punctuation">[</span>locations<span class="token punctuation">.</span>featureType <span class="token operator">!=</span> <span class="token string">&apos;unknown&apos;</span><span class="token punctuation">]</span>
+locations <span class="token operator">=</span> locations<span class="token punctuation">[</span>locations<span class="token punctuation">.</span>featureType <span class="token operator">!=</span> <span class="token string">&apos;unknown,&apos;</span><span class="token punctuation">]</span>
+
+<span class="token comment">#Split timePeriodsKeys column to several columns separating the periods, </span>
+<span class="token comment">#and keep the first 4 periods of the location</span>
+periodIndex <span class="token operator">=</span> <span class="token punctuation">[</span>locations<span class="token punctuation">.</span><span class="token builtin">id</span><span class="token punctuation">,</span>locations<span class="token punctuation">.</span>featureType<span class="token punctuation">]</span>
+period_df <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>locations<span class="token punctuation">.</span>timePeriodsKeys<span class="token punctuation">.</span><span class="token builtin">str</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">&apos;,&apos;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>tolist<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+                                          index<span class="token operator">=</span>periodIndex<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>dropna<span class="token punctuation">(</span>thresh<span class="token operator">=</span><span class="token number">800</span><span class="token punctuation">,</span>axis<span class="token operator">=</span><span class="token string">&apos;columns&apos;</span><span class="token punctuation">)</span>
+<span class="token comment">#Reformat column indexes</span>
+period_df<span class="token punctuation">.</span>reset_index<span class="token punctuation">(</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+period_df<span class="token punctuation">.</span>columns <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&apos;id&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;featureType&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;period1&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;period2&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;period3&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;period4&apos;</span><span class="token punctuation">]</span>
+
+<span class="token comment">#Further removing of missing information</span>
+period_df <span class="token operator">=</span> period_df<span class="token punctuation">[</span>period_df<span class="token punctuation">.</span>featureType <span class="token operator">!=</span> <span class="token string">&apos;&apos;</span><span class="token punctuation">]</span>
+period_df <span class="token operator">=</span> period_df<span class="token punctuation">.</span>dropna<span class="token punctuation">(</span>subset<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">&apos;featureType&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment">#Split featureType column to several columns separating type,</span>
+<span class="token comment">#and keep first 4 types of the location</span>
+period_feature_index <span class="token operator">=</span> <span class="token punctuation">[</span>period_df<span class="token punctuation">.</span><span class="token builtin">id</span><span class="token punctuation">,</span>period_df<span class="token punctuation">.</span>period1<span class="token punctuation">,</span>period_df<span class="token punctuation">.</span>period2<span class="token punctuation">,</span>
+                        period_df<span class="token punctuation">.</span>period3<span class="token punctuation">,</span>period_df<span class="token punctuation">.</span>period4<span class="token punctuation">]</span>
+period_feature_df <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>period_df<span class="token punctuation">.</span>featureType<span class="token punctuation">.</span><span class="token builtin">str</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">&apos;,&apos;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>tolist<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+                                              index<span class="token operator">=</span>period_feature_index<span class="token punctuation">)</span><span class="token punctuation">.</span>dropna<span class="token punctuation">(</span>thresh<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span>axis<span class="token operator">=</span><span class="token string">&apos;columns&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">#Reformat column indexes</span>
+period_feature_df<span class="token punctuation">.</span>reset_index<span class="token punctuation">(</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+period_feature_df<span class="token punctuation">.</span>columns <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&apos;id&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;period1&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;period2&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;period3&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;period4&apos;</span><span class="token punctuation">,</span>
+                             <span class="token string">&apos;type1&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;type2&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;type3&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;type4&apos;</span><span class="token punctuation">]</span>
+
+<span class="token comment">#Create a numpy array from the dataframe(general bad practise but here is uselful)</span>
+arr <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>period_feature_df<span class="token punctuation">,</span>dtype<span class="token operator">=</span><span class="token builtin">str</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>arr<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token keyword">in</span> <span class="token punctuation">[</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;None&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;nan&quot;</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+            arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&quot;nan&quot;</span>
+            <span class="token keyword">for</span> k <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>j<span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>k<span class="token operator">-</span><span class="token number">4</span><span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token string">&quot;nan&quot;</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                    arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+
+<span class="token comment">#Create array list to create combination of period and type columns</span>
+arr_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>arr<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token string">&quot;nan&quot;</span><span class="token punctuation">:</span>
+            arr_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment">#Create new dataframe from our array with correct split of period and type for each period</span>
+<span class="token comment">#(based on comma seperate ordering)</span>
+final_df <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>arr_list<span class="token punctuation">)</span>
+final_df<span class="token punctuation">.</span>columns <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&apos;id&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;period&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;type&apos;</span><span class="token punctuation">]</span>
+
+<span class="token comment">#Find the 7 periods that occur more often in the dataset</span>
+top7Periods <span class="token operator">=</span> final_df<span class="token punctuation">[</span><span class="token string">&apos;period&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value_counts<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">7</span><span class="token punctuation">]</span>
+
+<span class="token comment">#Find the 7 types that occur more often in the dataset</span>
+top7Types <span class="token operator">=</span> final_df<span class="token punctuation">[</span><span class="token string">&apos;type&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value_counts<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">7</span><span class="token punctuation">]</span>
+
+<span class="token comment">#Filter the dataset based on the top 7 periods and types</span>
+top7_df <span class="token operator">=</span> final_df<span class="token punctuation">[</span>final_df<span class="token punctuation">[</span><span class="token string">&apos;period&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>isin<span class="token punctuation">(</span>top7Periods<span class="token punctuation">)</span><span class="token punctuation">]</span>
+top7_df <span class="token operator">=</span> top7_df<span class="token punctuation">[</span>top7_df<span class="token punctuation">[</span><span class="token string">&apos;type&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>isin<span class="token punctuation">(</span>top7Types<span class="token punctuation">)</span><span class="token punctuation">]</span>
+</pre><h2 class="mume-header" id="use-of-all-periods-and-types">Use of all periods and types</h2>
+
+<p>In the following bar charts we created two histograms. The first one using all distinct <code>period</code> values we have in the dataset, and the second one using all distinct <code>type</code> values from the dataset. To produce our visualizations we used <code>final_df</code> dataframe that is the dataset after data preprocessing phase.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token comment">#All periods histogram</span>
+period_hist <span class="token operator">=</span> alt<span class="token punctuation">.</span>Chart<span class="token punctuation">(</span>final_df<span class="token punctuation">)</span><span class="token punctuation">.</span>mark_bar<span class="token punctuation">(</span>size<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">.</span>encode<span class="token punctuation">(</span>
+    x <span class="token operator">=</span> alt<span class="token punctuation">.</span>X<span class="token punctuation">(</span><span class="token string">&quot;period:N&quot;</span><span class="token punctuation">,</span>title<span class="token operator">=</span><span class="token string">&apos;Period&apos;</span><span class="token punctuation">,</span>sort <span class="token operator">=</span><span class="token string">&apos;y&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    y <span class="token operator">=</span> alt<span class="token punctuation">.</span>Y<span class="token punctuation">(</span><span class="token string">&apos;count(period):Q&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    color<span class="token operator">=</span><span class="token string">&apos;period:N&apos;</span><span class="token punctuation">,</span>
+    tooltip<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">&apos;count()&apos;</span><span class="token punctuation">]</span>
+<span class="token punctuation">)</span><span class="token punctuation">.</span>properties<span class="token punctuation">(</span>
+    title<span class="token operator">=</span><span class="token string">&quot;Period Histogram&quot;</span><span class="token punctuation">)</span>
+period_hist
+</pre><p><img src="Material/FirstVisualization/MaxPeriodsPhoto.png" alt="All Periods Img"></p>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token comment">#All types histogram</span>
+type_hist <span class="token operator">=</span> alt<span class="token punctuation">.</span>Chart<span class="token punctuation">(</span>final_df<span class="token punctuation">)</span><span class="token punctuation">.</span>mark_bar<span class="token punctuation">(</span>size<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">.</span>encode<span class="token punctuation">(</span>
+    x <span class="token operator">=</span> alt<span class="token punctuation">.</span>X<span class="token punctuation">(</span><span class="token string">&apos;type:N&apos;</span><span class="token punctuation">,</span>title<span class="token operator">=</span><span class="token string">&apos;Feature Type&apos;</span><span class="token punctuation">,</span>sort <span class="token operator">=</span><span class="token string">&apos;y&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    y <span class="token operator">=</span> alt<span class="token punctuation">.</span>Y<span class="token punctuation">(</span><span class="token string">&apos;count(type):Q&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    color<span class="token operator">=</span>alt<span class="token punctuation">.</span>Color<span class="token punctuation">(</span><span class="token string">&apos;type:N&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    tooltip<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">&apos;count()&apos;</span><span class="token punctuation">]</span>
+<span class="token punctuation">)</span><span class="token punctuation">.</span>properties<span class="token punctuation">(</span>
+    title<span class="token operator">=</span><span class="token string">&quot;Feature type for selected period(s)&quot;</span>
+<span class="token punctuation">)</span>
+type_hist
+</pre><p><img src="Material/FirstVisualization/MaxTypesPhoto.png" alt="All Types Img"></p>
+<h2 class="mume-header" id="use-of-top-seven-categories">Use of top seven categories</h2>
+
+<p>To produce our visualizations we used <code>top7_df</code> dataframe that is the dataset that contains only the top seven <code>period</code> and <code>type</code>.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python">selection <span class="token operator">=</span> alt<span class="token punctuation">.</span>selection_multi<span class="token punctuation">(</span>fields<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">&apos;period&apos;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> bind<span class="token operator">=</span><span class="token string">&apos;legend&apos;</span><span class="token punctuation">)</span>
+
+<span class="token comment">#period histogram</span>
+period_hist <span class="token operator">=</span> alt<span class="token punctuation">.</span>Chart<span class="token punctuation">(</span>top7_df<span class="token punctuation">)</span><span class="token punctuation">.</span>mark_bar<span class="token punctuation">(</span>size<span class="token operator">=</span><span class="token number">40</span><span class="token punctuation">)</span><span class="token punctuation">.</span>encode<span class="token punctuation">(</span>
+    x <span class="token operator">=</span> alt<span class="token punctuation">.</span>X<span class="token punctuation">(</span><span class="token string">&quot;period:N&quot;</span><span class="token punctuation">,</span>title<span class="token operator">=</span><span class="token string">&apos;Period&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    y <span class="token operator">=</span> alt<span class="token punctuation">.</span>Y<span class="token punctuation">(</span><span class="token string">&apos;count(period):Q&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    color<span class="token operator">=</span>alt<span class="token punctuation">.</span>Color<span class="token punctuation">(</span><span class="token string">&apos;period:N&apos;</span><span class="token punctuation">,</span>scale<span class="token operator">=</span>alt<span class="token punctuation">.</span>Scale<span class="token punctuation">(</span>
+        domain<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">&apos;roman&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;modern&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;late-antique&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;hellenistic-republican&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;classical&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;archaic&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;2nd-millenium-bce&apos;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token builtin">range</span><span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">&apos;#D81B60&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;#1E88E5&apos;</span> <span class="token punctuation">,</span><span class="token string">&apos;#FFC107&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;#004D40&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;#A06184&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;#24B2A6&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;#65D877&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    opacity<span class="token operator">=</span>alt<span class="token punctuation">.</span>condition<span class="token punctuation">(</span>selection<span class="token punctuation">,</span> alt<span class="token punctuation">.</span>OpacityValue<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> alt<span class="token punctuation">.</span>OpacityValue<span class="token punctuation">(</span><span class="token number">0.1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    tooltip<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">&apos;count()&apos;</span><span class="token punctuation">]</span>
+<span class="token punctuation">)</span><span class="token punctuation">.</span>properties<span class="token punctuation">(</span>
+    title<span class="token operator">=</span><span class="token string">&quot;Period Histogram&quot;</span><span class="token punctuation">,</span>
+    width<span class="token operator">=</span><span class="token number">300</span><span class="token punctuation">)</span><span class="token punctuation">.</span>add_selection<span class="token punctuation">(</span>
+selection<span class="token punctuation">)</span>
+
+<span class="token comment">#type histogram</span>
+type_hist <span class="token operator">=</span> alt<span class="token punctuation">.</span>Chart<span class="token punctuation">(</span>top7_df<span class="token punctuation">)</span><span class="token punctuation">.</span>mark_bar<span class="token punctuation">(</span>size<span class="token operator">=</span><span class="token number">40</span><span class="token punctuation">)</span><span class="token punctuation">.</span>encode<span class="token punctuation">(</span>
+    x <span class="token operator">=</span> alt<span class="token punctuation">.</span>X<span class="token punctuation">(</span><span class="token string">&apos;type:N&apos;</span><span class="token punctuation">,</span>title<span class="token operator">=</span><span class="token string">&apos;Feature Type&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    y <span class="token operator">=</span> alt<span class="token punctuation">.</span>Y<span class="token punctuation">(</span><span class="token string">&apos;count(type):Q&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    color<span class="token operator">=</span>alt<span class="token punctuation">.</span>Color<span class="token punctuation">(</span><span class="token string">&apos;type:N&apos;</span><span class="token punctuation">,</span> scale<span class="token operator">=</span>alt<span class="token punctuation">.</span>Scale<span class="token punctuation">(</span>
+        domain<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">&apos;fort&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;island&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;river&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;settlement&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;sanctuary&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;temple&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;villa&apos;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token builtin">range</span><span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">&apos;#8c564b&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;#2ca02c&apos;</span> <span class="token punctuation">,</span><span class="token string">&apos;#1f77b4&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;#ff7f0e&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;#98df8a&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;#ffbb78&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;#aec7e8&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    tooltip<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">&apos;count()&apos;</span><span class="token punctuation">]</span>
+<span class="token punctuation">)</span><span class="token punctuation">.</span>properties<span class="token punctuation">(</span>
+    title<span class="token operator">=</span><span class="token string">&quot;Feature type for selected period(s)&quot;</span><span class="token punctuation">,</span>
+    width<span class="token operator">=</span><span class="token number">300</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token punctuation">.</span>transform_filter<span class="token punctuation">(</span>
+selection<span class="token punctuation">)</span><span class="token punctuation">.</span>interactive<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+alt<span class="token punctuation">.</span>hconcat<span class="token punctuation">(</span>period_hist<span class="token punctuation">,</span> type_hist<span class="token punctuation">)</span><span class="token punctuation">.</span>resolve_scale<span class="token punctuation">(</span>
+    color<span class="token operator">=</span><span class="token string">&apos;independent&apos;</span>
+<span class="token punctuation">)</span>
+</pre><p><img src="Material/FirstVisualization/FinalFirstPhotoAll.png" alt="Final Photo All"></p>
+<p><img src="Material/FirstVisualization/FinalFirstPhotoOne.png" alt="Final Photo One"></p>
+<div class="cw narrative" ns-role="label-child"><h2 ns-role="label-child">What are all visual mappings used?</h2><div ns-role="label-child">
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">All Periods Chart</th>
+<th style="text-align:center">All Types Chart</th>
+<th style="text-align:center">Top Seven First</th>
+<th style="text-align:center">Top Seven Second</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>x</strong></td>
+<td style="text-align:center">period categories</td>
+<td style="text-align:center">type categories</td>
+<td style="text-align:center">period categories</td>
+<td style="text-align:center">type categories</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>y</strong></td>
+<td style="text-align:center">count of locations</td>
+<td style="text-align:center">count of locations</td>
+<td style="text-align:center">count of locations</td>
+<td style="text-align:center">count of locations</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>color</strong></td>
+<td style="text-align:center">period categories</td>
+<td style="text-align:center">type categories</td>
+<td style="text-align:center">period categories</td>
+<td style="text-align:center">type categories</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>tootip</strong></td>
+<td style="text-align:center">count of locations</td>
+<td style="text-align:center">count of locations</td>
+<td style="text-align:center">count of locations</td>
+<td style="text-align:center">count of locations</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+<p></p><div class="cw narrative" ns-role="label-child"><h2 ns-role="label-child">Was there any special data preparation done?</h2><div ns-role="label-child"><br>
+Firstly we remove all rows with missing information in either of <strong>timePeriodsKeys</strong> and <strong>featureType</strong> columns. Afterwards we split the columns by the comma delimeter creating new rows for each of these period or feature type respectively. With all these new but also existed rows we create a new dataframe with <strong>period</strong> and <strong>type</strong> columns. Further selection took place to filter top seven periods and top seven types based on the occurance of the locations. In general the preprocessing was done to deal with the above two columns that have comma separated values. For the final visualizations we aggregate periods and types by category to count locations.<br>
+</div></div><p></p>
+<p></p><div class="cw narrative" ns-role="label-child"><h2 ns-role="label-child">What are the limitations of your design?</h2><div ns-role="label-child"><br>
+One location can map to many types and periods. With the above charts we are not showing this relation between a location, periods and types. Someone can assume that the sum of count of locations of each period results to a number of distinct locations which is not the case. Additional bar charts to show how many locations occurs more that once would minimize this confusion.<br>
+</div></div><p></p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
